@@ -13,6 +13,3 @@ int main() {
 
    return 0;
 }
-git add lab1
-git commit –a –m ‘Alex Bartel lab1’
-git push
