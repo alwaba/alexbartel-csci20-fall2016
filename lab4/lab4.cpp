@@ -14,7 +14,7 @@ Test 3: 987654321
 */
 
 #include <iostream>
-#include <string>
+#include <iomanip>
 using namespace std; 
 
 int main()
@@ -22,27 +22,47 @@ int main()
     //assign variables. 
     int coinTotal = 0;
     
-    int numberQuarters = 0; //ie 4 quarters per dollar
-    int quarterMod = 0; 
-    int quarterVal = 0; 
-    
+    int numberQuarters = 0;
     int numberDimes = 0;
-    int dimeMod = 0;
-    int dimeVal = 0;
-    
-    int numberNickles = 0;
-    int nickelMod = 0;
-    int nickelVal = 0;
-    
+    int numberNickels = 0;
     int numberPennies = 0;
     
-    double payoutTotal = 0;
-    double feeTotal = 0;
+    double feeTotal = 0.00;
+    double payoutTotal = 0.00;
+    
+    float feePercentage = 0.109;
     
     //begin program
     cout << "Enter the value of your coins." << endl;
     cin >> coinTotal;
     
+    numberQuarters = (coinTotal / 25);
+    numberDimes = (coinTotal % 25) / 10;
+    numberNickels = (coinTotal - numberQuarters * 25 - numberDimes * 10) / 5;
+    numberPennies = (coinTotal % 5);
+    
+    feeTotal = (coinTotal * feePercentage);
+    payoutTotal = (coinTotal - feeTotal);
+    
+    cout << "You brought in " << endl;
+    cout << numberQuarters << " quarters." << endl;
+    cout << numberDimes << " dimes." << endl;
+    cout << numberNickels << " nickels." << endl;
+    cout << numberPennies << " pennies." << endl;
+    
+    cout << "Your 10.9% fee total is ";
+    cout << setprecision (2) << fixed << (feeTotal * .01) << " dollars." << endl;
+    cout << "Your payout is ";
+    cout << (payoutTotal * .01) << " dollars. Thank you!" << endl;
+    
+    return 0;
+}
+    
+    
+    
+    
+    
+    /*
     quarterMod = coinTotal % 25; //modulo total coin by 25
     quarterVal = (coinTotal - quarterMod); //subtract the modulo by 25 from total coins
     numberQuarters = quarterVal / 25; //divide the value by 25 to obtain number of quarters
@@ -78,3 +98,4 @@ int main()
     
     return 0;
 }
+*/
