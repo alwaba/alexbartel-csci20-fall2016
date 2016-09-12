@@ -13,8 +13,9 @@ struct monsterStruct{
     
 };
 
-int main (){
-    
+int main ()
+{
+
     int currentYear = 2016;
 
     monsterStruct oneMonster;
