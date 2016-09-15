@@ -13,6 +13,21 @@ struct monsterStruct{
     
 };
 
+void copyrightAlex(){
+    cout << " A    " << endl;
+    cout << "  L   " << endl;
+    cout << " 2 E  " << endl;
+    cout << "B 0 X " << endl;
+    cout << " A 1  " << endl;
+    cout << "  R 6 " << endl;
+    cout << "   T  " << endl;
+    cout << "    E " << endl;
+    cout << "     L" << endl;
+    cout << "Copyright" << endl;
+    
+    return;
+}
+
 int main ()
 {
 
@@ -98,6 +113,7 @@ int main ()
          << fiveMonster.monsterNose << " nose, and a "
          << fiveMonster.monsterMouth << " monster mouth." << endl;
          
-
+    copyrightAlex();
+    
     return 0;
 }
