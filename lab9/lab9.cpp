@@ -28,49 +28,67 @@ GetTempAsFahrenheit – returns the Fahrenheit temperature. Formula: ((c*9)/5 + 
 PrintTemperatures – prints the value as kelvin, Celsius and Fahrenheit by using the other functions available.
 */
 
-#include <iostream>
+#include<iostream>
 using namespace std;
 
-class TemperatureConverter
-{
+class TemperatureConverter{
+    
     public:
-        void SetTempFromCelsius(double celsius){
-            double kelvin_ = celsius + 273.15;
-            return;
-        }
-        void SetTempFromFahrenheit(double farenheit){
-            double kelvin_ = ((5 * farenheit - 32)/9) + 273.15;
-            return;
-        };
-        double GetTempAsCelsius(){
-            return (kelvin_ - 273.15);
-        };
-        double GetTempAsFarenheit(){
-            return ((kelvin_ * 9) / 5 + 32);
-        };
-        void PrintTemperatures(){
-            cout << TemperatureConverter::GetTempAsCelsius()
-            << TemperatureConverter::GetTempAsFahrenheit() << endl;
-            return;
-        }
-        TemperatureConverter();
+    void   SetTempFromKelvin(double kelvin);
+    double GetTempFromKelvin();
+    void   SetTempFromCelsius(double celsius);
+    void   SetTempFromFahrenheit(double fahrenheit);
+    double GetTempAsCelsius();
+    double GetTempAsFahrenheit();
+    void   PrintTemperatures();
+    TemperatureConverter();
+    TemperatureConverter(double input);
+    
     private:
-        double kelvin_;
+    double kelvin_;
+    double kelvin;
 };
 
 TemperatureConverter::TemperatureConverter(){
-    double kelvin_ = 0.00;
+    double kelvin = 0.00;
     return;
 }
 
-    void TemperatureConverter::SetTempFromCelsius(double celsius)
+TemperatureConverter::TemperatureConverter(double input){
+    double kelvin = input;
+    return;
+}
 
-    void TemperatureConverter::SetTempFromFahrenheit(double farenheit)
+void TemperatureConverter::SetTempFromKelvin(double kelvin){
+    double kelvin_ = kelvin;
+    return;
+}
 
-    double TemperatureConverter::GetTempAsCelsius()
-    
-    double TemperatureConverter::GetTempAsFarenheit()
-    
-    void TemperatureConverter::PrintTemperatures()
+double TemperatureConverter::GetTempFromKelvin(){
+    return kelvin_;
+}
 
-};
+void TemperatureConverter::SetTempFromCelsius(double celsius){
+    double kelvin_ = (celsius + 273.15);
+    return;
+}
+
+void TemperatureConverter::SetTempFromFahrenheit(double fahrenheit){
+    double kelvin_ = ((5* ((fahrenheit - 32) / 9)) + 273.15);
+    return;
+}
+
+double TemperatureConverter::GetTempAsCelsius(){
+    return (kelvin_ - 273.15);
+}
+
+double TemperatureConverter::GetTempAsFahrenheit(){
+    return ((kelvin_ * 9)/5 + 32); 
+}
+
+void TemperatureConverter::PrintTemperatures(){
+    cout << TemperatureConverter::GetTempFromKelvin()   << endl;
+    cout << TemperatureConverter::GetTempAsCelsius()    << endl;
+    cout << TemperatureConverter::GetTempAsFahrenheit() << endl;
+    return;
+}
