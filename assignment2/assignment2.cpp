@@ -96,24 +96,16 @@ int main (){
     DistanceConverter dist3(yardsIn);
     DistanceConverter dist4(milesIn);
     
+    dist2.SetInchesFromFeet(feetIn);
+    dist3.SetInchesFromYards(yardsIn);
+    dist4.SetInchesFromMiles(milesIn);
+    
     dist0.PrintDistances();
     dist1.PrintDistances();
     dist2.PrintDistances();
     dist3.PrintDistances();
     dist4.PrintDistances();
     
-    dist1.SetInchesFromInches(144);
-    cout << dist1.GetInches() << endl;
-    dist1.PrintDistances();
-    
-    dist2.SetInchesFromFeet(32);
-    cout<<dist2.GetFeet()<<endl;
-    dist2.PrintDistances();
-    
-    dist2.SetInchesFromMiles(4);
-    cout<<dist2.GetMiles()<<endl;
-    dist2.PrintDistances();
-    
-    
+
     return 0;
 }
