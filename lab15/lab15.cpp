@@ -47,7 +47,7 @@ int main(){
     
     while(userIn != 11){
         cin >> userIn;
-        UserArr[userIn - 1] = UserArr[userIn - 1] + userIn;
+        UserArr[userIn - 1] = UserArr[userIn - 1] + 1;
     }
     
     for (i = 0; i < 10; i++) {
