@@ -4,7 +4,7 @@ April Browne
 CSCI 20
 10.25.2016
 
-LAB15
+LAB 15 aka LAB 4.1
 
 Create a menu program.  Your menu must have 10 different items for the user to choose from.
 The program should allow the user to choose an item until they say they are done.

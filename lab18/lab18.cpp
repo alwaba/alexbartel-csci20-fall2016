@@ -3,7 +3,7 @@ April Browne
 CSCI 20
 11/1/16
 
-LAB 18 / 4.3 LAB
+LAB 18 / 4.4 LAB
 
 Problem Statement
 This program is responsible for creating user names for a new website you have created.
@@ -13,7 +13,7 @@ It should also determine if the names are the same and output a warning.
 After checking these things, it should create three different user name options (for example: apbrowne; aprilbrowne; abrowne).
 
 Requirements
-Use ONLY C string and character manipulation tools
+Use ONLY string tools
 
 Input
 Your name
@@ -31,18 +31,17 @@ abrowne
 
 #include<iostream>
 #include<string>
-#include<cstring>
 using namespace std;
 
 int main(){
     
-    char FirstName[11];
-    char LastName[21];
+    string FirstName;
+    string LastName;
 
     cout << "Please enter your first name" << endl;
     cin >> FirstName;
     
-    while(strlen(FirstName) > 10){
+    while(FirstName.length() > 10){
         cout << "Please enter a first name of ten characters or fewer." << endl;
         cin >> FirstName;
     }
@@ -50,7 +49,7 @@ int main(){
     cout << "Please enter your last name" << endl;
     cin >> LastName;
     
-    while(strlen(LastName) > 20){
+    while(FirstName.length() > 20){
         cout << "Please enter a last name of twenty characters or fewer." << endl;
         cin >> LastName;
     }    
@@ -59,8 +58,8 @@ int main(){
     
     cout << endl << "How about one of these usernames..." << endl;
     cout << FirstName << LastName << endl;
-    cout << FirstName[0] << LastName << endl;
-    cout << FirstName[0] << FirstName[1] << LastName << endl;
+    cout << FirstName.at(0) << LastName << endl;
+    cout << FirstName.at(0) << FirstName.at(1) << LastName << endl;
     
     return 0;
 }
