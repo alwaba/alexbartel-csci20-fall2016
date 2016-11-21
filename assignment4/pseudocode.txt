@@ -1,0 +1,26 @@
+checkbook program
+
+use a class to store the checkbook array
+use functions within the class to compile account balance,
+total merchant visits and amounts spent at each merchant
+
+all within class:
+use usertext.substr() from the first position until ':' for the first entry
+check to see if it is a deposit and add money to the account if not take money out of the account
+
+use usertext.substr() from ':' to ':' to get the second entry
+use a loop to compare if it's the same merchant and use a variable to increase the
+trips to the merchant and sum the amount spent
+
+main 
+
+prompt user for file name
+
+open file
+
+get each entire line and enter it in an array using a loop
+
+close file
+
+use the formatting and output from lab 19 to organize and display the elements of each array
+calling the class to output the functions

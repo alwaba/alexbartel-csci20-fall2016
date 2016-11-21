@@ -1,0 +1,6 @@
+Merchant     No. Visits    Amount Spent
+Albertsons              2         $51.47
+CheckerAuto              1         $19.95
+SuperTarget              2         $136.49
+HomeDepot              1         $47.89
+Balance: $644.20
