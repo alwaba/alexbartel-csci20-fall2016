@@ -92,7 +92,6 @@ void bookprog(string myfile){
                     buffer >> tempval;
                     merchant[j] = tempval;
                     }
-                    
                     else{
                     string mystring = cbk[j + 1];
                     istringstream buffer (mystring);
