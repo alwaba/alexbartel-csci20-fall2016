@@ -1,0 +1,26 @@
+Alex Bartel
+April Browne
+CSCI 20 T/Th
+12.13.2016
+
+ASSIGNMENT 5
+
+pig is a dice game where two players compete to be the first to reach 100 points. 
+players earn points by rolling one die. the number rolled equals the number of points earned. 
+players continue to roll and add points until they choose to HOLD and total all of the points from their turn 
+OR until the player rolls a 1. If the player rolls a 1, they recieve no points for their turn. 
+the first player to exceed 100 wins. I would like to do this assignment to have a program that I can 
+develop and an algorithm I can refine over time to continue practicing my programming. The game is also a nice 
+follow up to 
+
+PSEUDOCODE
+player chooses whether they want to play against a friend or against the computer
+if the user chooses to play against the computer
+start with a roll. use a variable to sum the rolls in a turn until they choose to hold their points which I will store in an object.
+if the user rolls a one they lose all their points for the turn and it's the computer's turn.
+switch to the computers turn. have the computer roll until they roll a 1. I will track the points in a similar way as 
+with the user's rolling algorithm. 
+
+if the player chooses to play against a friend, the same rules apply but rather than computer "AI".
+use an array of objects to make different players and use those objects to store values. 
+loop through the array of objects and whichever is the first to 100 wins! 
